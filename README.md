@@ -1,101 +1,101 @@
-# 🖼️ Image Processing Project
+# 🖼️ Image Processing Toolkit
 
-This project showcases fundamental image processing techniques using Python, focusing on contour detection and edge detection. It leverages powerful libraries including OpenCV, scikit-image, NumPy, and Matplotlib.
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/OpenCV-4.7.0-brightgreen?logo=opencv" alt="OpenCV">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
+</div>
 
-## ✨ Features
-- **Image Resizing**: Resizes input images to a consistent resolution
-- **Active Contour Segmentation**: Implements snake algorithm for object boundary detection
-- **Canny Edge Detection**: Highlights edges using Canny algorithm
-- **Visualization**: Displays original images, processed results, and contours
+<p align="center">
+✨ Проект демонстрирует ключевые техники обработки изображений с помощью Python
+</p>
 
-## 📋 Prerequisites
-Install required libraries:
+## ✨ Особенности
+- **Активные контуры** - Сегментация объектов методом "змейки"
+- **Детектирование граней** - Алгоритм Кэнни для выделения граней
+- **Изменение размера** - Единообразное масштабирование изображений
+- **Визуализация** - Сравнение оригинальных и обработанных изображений
+
+## 📦 Предварительные требования
 ```bash
 pip install opencv-python numpy scikit-image matplotlib
 ```
-## 🗂️ Project Structure
+## 🗂️  Структура проекта
+.
+├── main.py              # Активные контуры
+├── canny.py             # Детектирование граней
+├── resize.py            # Изменение размера
+├── images/              # Папка с изображениями
+│   ├── CORN_WHITE.jpg   # Пример изображения
+│   └── results/         # Результаты обработки
+├── README.md            # Документация
+└── LICENSE              # MIT Лицензия
 
-├── main.py              # Active contour segmentation
-├── canny.py             # Canny edge detection
-├── resize.py            # Image resizing
-├── CORN_WHITE.jpg       # Sample input image
-├── README.md            # Project documentation
-└── LICENSE              # MIT License
-
-## 🚀 Usage
-Clone repository:
+## 🚀 Быстрый старт
+Клонируйте репозиторий:
+```bash
 git clone <repository-url>
 cd image-processing-project
-Prepare input image:
+```
+Запустите обработку:
+```bash
+# Активные контуры
+python main.py --input images/CORN_WHITE.jpg
 
-Place your image in project directory (default: CORN_WHITE.jpg)
+# Детектирование граней
+python canny.py --input images/CORN_WHITE.jpg
 
-Update file paths in scripts if using different image
+# Изменение размера
+python resize.py --input images/CORN_WHITE.jpg --output images/resized.jpg
+```
+## 🧠 Детали реализации:
+🔵 Активные контуры (main.py)
+```bash
+# Параметры алгоритма
+alpha = 0.015    # Эластичность контура
+beta = 10.0       # Жёсткость контура
+gamma = 0.001     # Шаг эволюции
+max_iterations = 500
+```
+## 🔶 Детектирование граней (canny.py):
+```bash
+edges = cv2.Canny(
+    image=blurred, 
+    threshold1=100,  # Нижний порог
+    threshold2=200   # Верхний порог
+)
+```
+## 🔷 Изменение размера (resize.py):
+```bash
+resized = cv2.resize(
+    src=image, 
+    dsize=(500, 500), 
+    interpolation=cv2.INTER_AREA
+)
+```
+## ⚙️ Настройка параметров:
+## ⚙️ Настройка параметров
 
-Run scripts:
-# Active Contour Segmentation
-python main.py
+| Параметр     | Рекомендуемые значения | Описание                |
+|--------------|-----------------------|-------------------------|
+| alpha        | 0.01 - 0.05           | Эластичность контура    |
+| beta         | 5.0 - 20.0            | Жёсткость контура       |
+| threshold1   | 50 - 150              | Нижний порог Кэнни      |
+| threshold2   | 150 - 250             | Верхний порог Кэнни     |
 
-# Canny Edge Detection
-python canny.py
+## 📌 Важные заметки:
+Для сложных изображений увеличьте max_iterations
 
-# Image Resizing
-python resize.py
+Настройте пороги Кэнни под ваши изображения
 
-## 🧠 Code Overview
+Все результаты сохраняются в папке images/results/
 
-Active Contour Segmentation (main.py)
-# Key parameters
-alpha = 0.015    # Contour elasticity
-beta = 10.0      # Contour rigidity
-gamma = 0.001    # Evolution step size
-max_num_iter = 500  # Maximum iterations
+Поддерживаются форматы JPG, PNG, BMP
 
-Resizes image to 800x800 pixels
+## 📜 Лицензия:
+Этот проект распространяется под MIT License
 
-Applies Gaussian smoothing
+<div align="center"> <p>Сделано с ❤️ используя:</p> <img src="https://img.shields.io/badge/OpenCV-FF0000?logo=opencv&logoColor=white" height="30"> <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" height="30"> <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" height="30"> </div> 
 
-Initializes circular contour at center
 
-Visualizes initial (red dashed) and final (blue solid) contours
 
-Canny Edge Detection (canny.py)
-Resizes image to 500x500 pixels
-
-Applies Canny algorithm with thresholds (100, 200)
-
-Displays original and edge-detected images
-
-Image Resizing (resize.py)
-Loads image in grayscale
-
-Resizes to 500x500 pixels
-
-Displays resized image
-
-## 📝 Notes
-Tune active contour parameters (alpha, beta, gamma) based on image content
-
-Adjust Canny thresholds (100, 200) for optimal edge detection
-
-Ensure input image exists in project directory
-
-## 📜 License
-MIT License - see LICENSE file for details
-
-## 🤝 Contributing
-Contributions welcome! Submit pull requests or open issues to discuss improvements.
-
-## Built with ❤️ using Python and OpenCV
-
-This Markdown features:
-- Clean section headers with relevant emojis
-- Consistent code block formatting
-- Visual directory tree structure
-- Highlighted parameters and key functionality
-- Clear usage instructions with copy-paste ready commands
-- Responsive design for GitHub rendering
-- Important notes in dedicated section
-- Visual separation of components
-
-The layout is optimized for GitHub README rendering with proper spacing, section organization, and emphasis on key information while maintaining technical accuracy.

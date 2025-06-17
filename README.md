@@ -13,7 +13,7 @@ Install required libraries:
 ```bash
 pip install opencv-python numpy scikit-image matplotlib
 
-🗂️ Project Structure
+## 🗂️ Project Structure
 
 ├── main.py              # Active contour segmentation
 ├── canny.py             # Canny edge detection
@@ -22,7 +22,7 @@ pip install opencv-python numpy scikit-image matplotlib
 ├── README.md            # Project documentation
 └── LICENSE              # MIT License
 
-🚀 Usage
+## 🚀 Usage
 Clone repository:
 git clone <repository-url>
 cd image-processing-project
@@ -42,7 +42,7 @@ python canny.py
 # Image Resizing
 python resize.py
 
-🧠 Code Overview
+## 🧠 Code Overview
 
 Active Contour Segmentation (main.py)
 # Key parameters
@@ -73,20 +73,20 @@ Resizes to 500x500 pixels
 
 Displays resized image
 
-📝 Notes
+## 📝 Notes
 Tune active contour parameters (alpha, beta, gamma) based on image content
 
 Adjust Canny thresholds (100, 200) for optimal edge detection
 
 Ensure input image exists in project directory
 
-📜 License
+## 📜 License
 MIT License - see LICENSE file for details
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions welcome! Submit pull requests or open issues to discuss improvements.
 
-Built with ❤️ using Python and OpenCV
+## Built with ❤️ using Python and OpenCV
 
 This Markdown features:
 - Clean section headers with relevant emojis

@@ -50,7 +50,7 @@ python canny.py --input images/CORN_WHITE.jpg
 python resize.py --input images/CORN_WHITE.jpg --output images/resized.jpg
 ```
 ## 🧠 Детали реализации:
-🔵 Активные контуры (main.py)
+## 🔵 Активные контуры (main.py)
 ```bash
 # Параметры алгоритма
 alpha = 0.015    # Эластичность контура

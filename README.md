@@ -21,7 +21,7 @@
 pip install opencv-python numpy scikit-image matplotlib
 ```
 ## 🗂️  Структура проекта
-.
+```
 ├── main.py              # Активные контуры
 ├── canny.py             # Детектирование граней
 ├── resize.py            # Изменение размера
@@ -30,11 +30,12 @@ pip install opencv-python numpy scikit-image matplotlib
 │   └── results/         # Результаты обработки
 ├── README.md            # Документация
 └── LICENSE              # MIT Лицензия
+```
 
 ## 🚀 Быстрый старт
 Клонируйте репозиторий:
 ```bash
-git clone <repository-url>
+git clone <https://github.com/AsDo001/Grains/blob/main/README.md>
 cd image-processing-project
 ```
 Запустите обработку:

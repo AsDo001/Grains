@@ -12,7 +12,7 @@ This project showcases fundamental image processing techniques using Python, foc
 Install required libraries:
 ```bash
 pip install opencv-python numpy scikit-image matplotlib
-
+```
 ## 🗂️ Project Structure
 
 ├── main.py              # Active contour segmentation

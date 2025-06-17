@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-classic_img = cv2.imread("CORN_WHITE.jpg", cv2.IMREAD_GRAYSCALE)
+classic_img = cv2.imread("images\CORN_WHITE.jpg", cv2.IMREAD_GRAYSCALE)
 
 
 if classic_img is None:

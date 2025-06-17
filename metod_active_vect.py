@@ -6,7 +6,7 @@ from skimage.segmentation import active_contour
 from skimage.filters import gaussian
 
 # Загрузка и подготовка изображения
-image = io.imread('CORN_WHITE.jpg')
+image = io.imread('images\CORN_WHITE_1.jpg')
 resized_img = cv2.resize(image, (800, 800))
 
 # Конвертация в grayscale и сглаживание
